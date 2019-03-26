@@ -1,0 +1,94 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Floor.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Bouncy_Floor.gd" type="Script" id=3]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+height = 20.0
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Floor" type="StaticBody2D" parent="." index="0"]
+
+position = Vector2( 218, 278 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Floor" index="0"]
+
+polygon = PoolVector2Array( 3.664, -1.06573, 142.664, -2.06573, 151.664, 95.9343, -71.336, 87.9343 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = ExtResource( 2 )
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+_sections_unfolded = [ "Texture" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="1"]
+
+position = Vector2( 75.4042, 42.9671 )
+scale = Vector2( 12.2862, 5.29671 )
+shape = SubResource( 1 )
+
+[node name="Bouncy_Floor" type="StaticBody2D" parent="." index="1"]
+
+position = Vector2( 632, 313 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="Bouncy_Floor" index="0"]
+
+polygon = PoolVector2Array( 64.6639, -5.06573, -76.3361, -5.06573, -69.3361, 25.9343, 33.6639, 93.9343, 141.664, 23.9343 )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+_sections_unfolded = [ "Texture" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bouncy_Floor" index="1"]
+
+position = Vector2( 25.6639, 41.4343 )
+scale = Vector2( 7.9, 2.58696 )
+shape = SubResource( 2 )
+
+
