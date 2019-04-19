@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Floor/StaticBody2D.gd" type="Script" id=2]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 419, 229.5 )
+scale = Vector2( 6.09375, 1.23437 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -0.547455, -29.6229, 29.4833, -28.8127, 29.6474, 28.7063, -1.20387, 30.3265 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PoolVector2Array( -31.727, -26.3824, -31.8911, 31.9468, -0.711555, 31.1366, -0.711555, -32.0532 )
+

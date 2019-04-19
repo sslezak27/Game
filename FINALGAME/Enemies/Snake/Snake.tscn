@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Enemies/Snake/Snake.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Snake" type="KinematicBody2D"]
+position = Vector2( 480, 271 )
+collision_layer = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 3.5, 16.5 )
+scale = Vector2( 0.890625, 7.35938 )
+frames = SubResource( 1 )
+
+[node name="Passive" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -20, -218.908, 29, -219.908, 30, 247.093, -18, 246.093 )
+
+[node name="Underground" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -18, -219.369, 28, -220.369, 32, 245.631, -21, 245.631 )
+
+[node name="Under" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
