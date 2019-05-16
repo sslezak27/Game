@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Floor/Floor.gd" type="Script" id=2]
+[ext_resource path="res://Tiles/Floor/Bottom.gd" type="Script" id=3]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 415.5, 220 )
+scale = Vector2( 5.89062, 1 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Floor" type="StaticBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Floor"]
+position = Vector2( 0, -11.1275 )
+scale = Vector2( 1, 0.77459 )
+polygon = PoolVector2Array( -31.8873, -30.0657, 31.4337, -31.0657, 33.3011, 28.9343, -31.378, 29.9343 )
+
+[node name="Bottom" type="StaticBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Bottomcol" type="CollisionPolygon2D" parent="Bottom"]
+position = Vector2( 0, 22.1464 )
+scale = Vector2( 1, 0.375 )
+polygon = PoolVector2Array( -31.8873, -30.0657, -9.42103, -30.4205, 31.4337, -31.0657, 33.3011, 28.9343, -31.378, 29.9343 )
+

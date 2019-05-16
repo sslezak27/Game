@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/Attacks/Melee.gd" type="Script" id=1]
+[ext_resource path="res://char.png" type="Texture" id=2]
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+collision_layer = 1024
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -0.263367, -1.31686 )
+polygon = PoolVector2Array( 0.48703, 16.4425, 12.6352, 13.7758, 16.1907, 7.84992, 14.413, -1.92785, 14.1167, -8.44637, 11.7463, -14.3723, 4.63519, -17.6316, 0.190735, -19.7056, 0.190735, -25.3353, 9.96852, -22.9649, 19.7463, -15.2612, 20.3389, -9.03896, 22.413, -1.63155, 22.413, 3.70177, 21.5241, 10.8129, 20.3389, 18.2203, 16.7833, 20.887, 14.413, 21.1833, 3.45, 22.6647, -0.401855, 22.6647 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 4.01646, -0.592588 )
+scale = Vector2( 0.673314, 0.291682 )
+texture = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+

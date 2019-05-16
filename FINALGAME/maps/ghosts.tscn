@@ -1,0 +1,268 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Tiles/Floor/Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Tiles/Walls/lWalls.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tiles/Walls/rWalls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tiles/Ceil/Ceil.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tiles/Laser/Laser.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Tiles/Spikes/Spikes.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Ghost/KinematicBody2D.tscn" type="PackedScene" id=7]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="floors" type="Node2D" parent="."]
+
+[node name="Sprite" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 450, 580 )
+scale = Vector2( 16.4537, 1 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite2" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 1429.64, 1151.73 )
+scale = Vector2( 12.0943, 1.12949 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite3" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 3860.58, 802.992 )
+scale = Vector2( 4.55664, 0.691254 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite5" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 4477.62, 634.709 )
+scale = Vector2( 4.55664, 0.691254 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite6" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 5117.09, 449.598 )
+scale = Vector2( 4.55664, 0.691254 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite7" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 5545.29, 331.8 )
+scale = Vector2( 0.524875, 0.691254 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite8" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 6475.33, 146.339 )
+scale = Vector2( 17.2655, 1.21714 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite10" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 7992.62, -38.7719 )
+scale = Vector2( 1.75196, 1.21714 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite15" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 7521.08, -1.68748 )
+scale = Vector2( -1.5874, 0.438051 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite12" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 9608.13, 95.8542 )
+scale = Vector2( 1.75196, 1.21714 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite13" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 10197.1, -21.9436 )
+scale = Vector2( 1.75196, 1.21714 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite14" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 11324.9, -139.742 )
+scale = Vector2( 18.9308, 1.21714 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite11" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 8850.86, 174.386 )
+scale = Vector2( 1.75196, 1.21714 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite9" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 8736.11, -706.293 )
+scale = Vector2( 52.5873, 1.21714 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="Sprite4" parent="floors" instance=ExtResource( 1 )]
+position = Vector2( 3023.34, 1004.64 )
+scale = Vector2( 12.0943, 1.12949 )
+offset = Vector2( 3.25046, -10.0001 )
+
+[node name="lwalls" type="Node2D" parent="."]
+
+[node name="Sprite" parent="lwalls" instance=ExtResource( 2 )]
+position = Vector2( -43.9858, 237.344 )
+scale = Vector2( 1.29688, 11.129 )
+
+[node name="Sprite2" parent="lwalls" instance=ExtResource( 2 )]
+position = Vector2( 1022.31, 892.036 )
+scale = Vector2( 1.29688, 9.31616 )
+
+[node name="rwalls" type="Node2D" parent="."]
+
+[node name="Sprite" parent="rwalls" instance=ExtResource( 3 )]
+position = Vector2( 940, 167.514 )
+scale = Vector2( 2.90625, 8.51518 )
+
+[node name="Sprite2" parent="rwalls" instance=ExtResource( 3 )]
+position = Vector2( 1855.74, 885.526 )
+scale = Vector2( 1.65453, 11.0566 )
+
+[node name="Sprite3" parent="rwalls" instance=ExtResource( 3 )]
+position = Vector2( 1848.26, 157.794 )
+scale = Vector2( 1.65453, 10.0828 )
+
+[node name="Ceiling" type="Node2D" parent="."]
+
+[node name="Sprite" parent="Ceiling" instance=ExtResource( 4 )]
+position = Vector2( 489.394, -119.777 )
+scale = Vector2( 16.7029, 1 )
+
+[node name="Trapz" type="Node2D" parent="."]
+
+[node name="LaserGun" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 35.2208, 500.687 )
+time = 1.0
+speed = Vector2( 300, 0 )
+
+[node name="LaserGun5" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 90.4691, 44.8892 )
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun8" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 7186.39, -611.413 )
+time = 2.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun9" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 7359.24, -614.737 )
+time = 2.5
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun10" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 7492.2, -623.047 )
+time = 5.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun11" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 7660.07, -624.709 )
+time = 2.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun12" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 7829.6, -619.723 )
+time = 3.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun13" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 7994.14, -624.709 )
+time = 5.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun14" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 8221.85, -621.385 )
+time = 2.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun15" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 8404.67, -623.047 )
+time = 3.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun16" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 8619.07, -623.047 )
+time = 4.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun17" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 8825.17, -621.385 )
+time = 5.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun18" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 9026.27, -623.047 )
+time = 2.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun19" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 9212.42, -621.385 )
+time = 3.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun20" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 9405.22, -628.034 )
+time = 4.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun21" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 9637.91, -623.047 )
+time = 5.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun22" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 9853.98, -626.372 )
+time = 2.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun23" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 10045.1, -631.358 )
+time = 3.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun24" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 10220, -630 )
+time = 4.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun25" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 10414.5, -643.296 )
+time = 2.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun26" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 10698.7, -144.681 )
+time = 5.0
+speed = Vector2( -400, 0 )
+
+[node name="LaserGun27" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 10108.6, -23.3516 )
+time = 7.0
+speed = Vector2( -400, 0 )
+
+[node name="LaserGun7" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 7.59671, -187.153 )
+speed = Vector2( 0, -200 )
+
+[node name="LaserGun6" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 814.221, 42.1267 )
+time = 2.0
+speed = Vector2( 0, 200 )
+
+[node name="LaserGun2" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 1055.93, 300.412 )
+time = 3.0
+speed = Vector2( 100, 0 )
+
+[node name="LaserGun3" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 1053.17, 134.668 )
+time = 4.0
+speed = Vector2( 100, 0 )
+
+[node name="LaserGun4" parent="Trapz" instance=ExtResource( 5 )]
+position = Vector2( 1061.46, -28.3146 )
+time = 5.0
+speed = Vector2( 100, 0 )
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" parent="Node2D" instance=ExtResource( 6 )]
+position = Vector2( 5831.39, 1414.81 )
+scale = Vector2( 183.026, 1 )
+
+[node name="Ghost" parent="." instance=ExtResource( 7 )]
+position = Vector2( 106.802, 187.953 )
+
+[node name="Camera2D" type="Camera2D" parent="Ghost"]
+position = Vector2( 9.51836, 68.1324 )
+scale = Vector2( 1, 0.989844 )
+current = true
+

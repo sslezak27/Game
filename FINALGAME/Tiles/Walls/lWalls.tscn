@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Tiles/Walls/LWalls.gd" type="Script" id=2]
+
+[node name="Sprite" type="Sprite"]
+position = Vector2( 524, 171 )
+scale = Vector2( 2.90625, 2.99999 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LWalls" type="StaticBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LWalls"]
+polygon = PoolVector2Array( -31.7269, -32.0534, 29.4833, -28.8127, 29.6474, 28.7063, -31.7269, 29.5165 )
+
