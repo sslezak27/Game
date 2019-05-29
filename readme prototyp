@@ -1,0 +1,43 @@
+By uruchomić program należy skopiować oba pliki do wspólnego folderu i wypakować archiwum nazwane prototyp, których nazwa zaczyna się na linux i uruchomić ten z rozszerzeniem .86_64
+
+
+
+W związku z tym, że obecna wersja Godot engine wydaje się mieć zbugowany kompilator, a rollback nie jest możliwy poniżej znajdują się założenia co jak ma działać i bugi z tym związane już znalezione:
+
+Założenia rozgrywki:
+-Poruszanie się przy pomocy strzałek, shift powoduje nagłe przyspieszenie i można go używać co 2s
+- W poziomie startowym po prawej stronie znajdują się podpisane wcięcia w ścianie (ext powoduje wyjście z programu, new powoduje rozpoczęcie gry od 1 poziomu, powyżej znajduje się przejście gdzie poszczególne wnęki są poziomami w kolejności rosnącej)
+-Gracz powinien mieć możliwość przylepiana się do ścian, odbijania się od nich oraz wspinania się po nich, jak i w przypadku boków pocisków, które nie mają na sobie kolców
+-Zadaniem gracza jest dojście na koniec poziomu gdzie zostanie on przeteleportowany do następnego (w przypdaku ostatniego zostanie przeniesiony do poziomu startowego)
+- za każdą śmiercią gracz jest przenoszony na początek poziomu
+- w lewym górnym rogu znajduje się miernik czasu procesora, dopóki ostatnia cyfra jest praktycznie nie do przeczytania wszystko powinno być ok.
+
+
+
+-Ogólnie gra jest trudna, lecz każdy poziom posiada śćieżkę ułatwiającą znacząco dotarcie do celu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Bugi nie zależne ode mnie\ niemożliwe do naprawy:
+-Czasami wejście w obasz exit, które powinien zamknąc program, czasami restartuje poziom
+-Czasami program zaczyna lagować, restart pomaga (bardzo możliwe, że wina laptopa)
+
+
+
+Bugi, które są naprawialne 
+
+-Detekcja kolizji z blokami czasami nie działa jak należy, gracz ginie czasai bez dotykania kolców
+
+
+
