@@ -1,0 +1,18 @@
+Podsumowanie
+Udało się zrobić:
+Grywalna jedna postać z 3 poziomami
+Animacje, tekstury grafika
+Liczne bugfixy związanie z oprogramowaniem
+
+Nie udało się zrobić:
+-Poziom dla drugiej postaci z przeciwnikiem
+-muzyka
+-lepsza grafika
+
+Reszta niezgodności z raportem 1, bądź 2 wynika ze zmian koncepcyjnych
+
+Napotkane problemy:
+Skompilowany program w silniku zachowuje się inaczej niż ten odtwarzany w nim -> poświęcenie dużej ilości czasu na bugfixy zamiast na
+dodatkowe features. Powiązane jest to równierz, z tym, że Godot jest niezbyt popularnym silnikiem i wsparcie do niego jest
+ciężkie od odnalezienia, nie pomaga również niejasna dokumentacja.
+
